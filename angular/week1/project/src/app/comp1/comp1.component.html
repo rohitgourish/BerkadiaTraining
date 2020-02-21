@@ -1,0 +1,16 @@
+<body>
+  <div class="container">
+    <h4 style="text-align: center; padding-bottom: 10px; padding-top: 10px;">MARVEL</h4>
+    <div class="row">
+      <figure *ngFor="let item of images; let k = index" class="col-lg-4">   
+        <img [src]=item class="component1">
+        <figcaption style="display: block;">{{names[k]}}</figcaption>
+      </figure>
+    </div>
+  </div>
+</body>
+
+<!-- <figure class="item">
+    <img src=""/>
+    <figcaption class="caption">Text below the image</figcaption>
+</figure> -->

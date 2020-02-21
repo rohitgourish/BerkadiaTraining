@@ -1,0 +1,11 @@
+<body>
+  <div class="container">
+    <h4 style="text-align: center; padding-bottom: 10px; padding-top: 10px;">DC COMICS</h4>
+    <div class="row">
+      <figure *ngFor="let item of images; let k = index" class="col-lg-4">   
+        <img [src]=item class="component2">
+        <figcaption style="display: block;">{{names[k]}}</figcaption>
+      </figure>
+    </div>
+  </div>
+</body>

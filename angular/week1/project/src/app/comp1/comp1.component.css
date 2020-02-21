@@ -1,0 +1,12 @@
+.component1{
+    width:150px;
+    height: 250px;
+}
+
+.container{
+    border: 3px solid black;
+}
+
+figure {
+    text-align: center;
+}
