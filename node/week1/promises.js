@@ -49,7 +49,7 @@ checkUserAccess = (roles) => {
 
 authenticateUser = (username, password) => {
     verifyUser(username, password).then(getRoles).then(checkUserAccess).then(() => {
-        console.log('executed sequentially aaattt adaba akash')
+        console.log('Hurrraayyy executed sequentially.....')
     }).catch(() => {
         console.log('failure')
     });
