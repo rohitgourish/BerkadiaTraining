@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-comp2',
-  templateUrl: './comp2.component.html',
-  styleUrls: ['./comp2.component.css']
+  selector: 'app-userList',
+  templateUrl: './userList.component.html',
+  styleUrls: ['./userList.component.css']
 })
-export class Comp2Component implements OnInit {
+export class UserListComponent implements OnInit {
 
   // arrayData:string[] = [];
   

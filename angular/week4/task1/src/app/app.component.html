@@ -11,10 +11,10 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-6 col-md-12">
-      <app-comp1 (childData)="contactSelected($event)"></app-comp1>
+      <app-addUser (childData)="contactSelected($event)"></app-addUser>
     </div>
     <div class="col-lg-6 col-md-12">
-      <app-comp2 [child]="arrayData" (sendBack)="delete($event)"></app-comp2>
+      <app-userList [child]="arrayData" (sendBack)="delete($event)"></app-userList>
     </div>
   </div>
 </div>
