@@ -1,0 +1,7 @@
+<h1>NAMES LIST</h1>
+<div *ngFor="let item of data;let i = index" class = "list">
+    <div [ngStyle]="{color : i%2==0 ? 'green':'red'}">
+        {{item.names}}
+        <button class="btn btn-danger buttonSubmit" (click)= "delete(item.id)"><i class="fa fa-trash-o trashBin" style="font-size:15px"></i></button> 
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.list {
+    border-style: groove;
+    padding: 15px;
+}
+
+.buttonSubmit{
+    float: right;
+    padding: 5px;
+}
+
+.trashBin{
+    padding: 1px;
+}

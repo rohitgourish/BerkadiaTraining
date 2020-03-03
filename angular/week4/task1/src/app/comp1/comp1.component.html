@@ -1,0 +1,13 @@
+<h1>ENTER NAMES</h1>
+
+<div class="Form">
+  <div>
+    <label>ENTER FIRSTNAME :</label>
+    <input type="text" class="form-control" placeholder="Firstname" [(ngModel)]="firstName">
+  </div>
+  <div>
+    <label>ENTER LASTNAME :</label>
+    <input type="text" class="form-control" placeholder="Lastname" [(ngModel)]="lastName">
+  </div><br>
+  <button class="btn btn-primary" [disabled]="checkButton()" (click)="onClick()">ADD TO LIST</button>
+</div>

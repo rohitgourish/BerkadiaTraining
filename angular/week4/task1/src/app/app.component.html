@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <h1 >NO OF USERS: <span [ngClass]="{colorNumber: arrayData.length===0}" [innerHTML]="arrayData.length"></span></h1>
+      <hr>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-12">
+      <app-comp1 (childData)="contactSelected($event)"></app-comp1>
+    </div>
+    <div class="col-lg-6 col-md-12">
+      <app-comp2 [child]="arrayData" (sendBack)="delete($event)"></app-comp2>
+    </div>
+  </div>
+</div>
