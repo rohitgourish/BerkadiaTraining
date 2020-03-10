@@ -22,20 +22,15 @@ export class AppComponent {
     names:this.message
     });
     this.counter++;
-    this.message = ''
-    this.number++;
-    
+    this.message = ''    
   }
 
-  number:number = 0;
 
   delete(event){
     if(confirm("Are you sure you want to delete?")){
       this.arrayData = this.arrayData.filter(todos => todos.id !== event);
-      this.number--;
     } else{
-
+      //lite 
     }
-    
   }
 }
