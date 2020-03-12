@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 cardDesign">
-            <h1>{{movieDetails.title}}</h1>
+            <h1>{{movieDetails.title | uppercase}}</h1>
             <img [src] = "movieDetails.poster_path">
             <br><br>
             <h6><u>RELEASE DATE</u>: {{movieDetails.release_date}} {{'('+movieDetails.status+')'}} {{'('+movieDetails.runtime+' min)'}}</h6>
