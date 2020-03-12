@@ -1,0 +1,15 @@
+.cardDesign{
+    border:2px groove wheat;
+    color: wheat;
+    background-color: rgb(34, 30, 30);
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+img{
+    height: 500px;
+    width: 450px;
+    border: 3px groove wheat;
+}
+a{
+    cursor: pointer;
+}
