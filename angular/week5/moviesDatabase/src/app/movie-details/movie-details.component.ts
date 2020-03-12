@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { MovieService } from '../movie.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { MovieService } from '../movie.service';
 })
 
 export class MovieDetailsComponent implements OnInit {
-  constructor(private activatedRoute:ActivatedRoute, private movieService:MovieService) { }
+  constructor(private activatedRoute:ActivatedRoute, private movieService:MovieService, private router:Router) { }
   
   public movieId:number;
   public movieDetails:any;
@@ -28,6 +28,10 @@ export class MovieDetailsComponent implements OnInit {
 
   }
   ImdbPage(id){
-    window.open(`https://www.imdb.com/title/${id}/?ref_=nv_sr_srsg_0`)
+    window.open(`https://www.imdb.com/title/${id}/?ref_=nv_sr_srsg_0`);
+  }
+
+  goBack(){
+    this.router.navigate(['/trending'])
   }
 }

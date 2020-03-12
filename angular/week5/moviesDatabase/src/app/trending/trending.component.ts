@@ -13,12 +13,11 @@ export class TrendingComponent implements OnInit {
   ngOnInit(): void {
     this.movieService.getTrendingMovies()
     .subscribe(data =>{
-      data.results.forEach(i=>{
+      data["results"].forEach(i=>{
         i.poster_path ="https://image.tmdb.org/t/p/original"+ i.poster_path;
         
       });
-      console.log(data.results);
-      this.movieData=data.results});
+      this.movieData=data["results"]});
     }
     onCardClick(id){
       this.router.navigate(['/details',id]);

@@ -21,11 +21,11 @@ export class SearchComponent implements OnInit {
       this.search = search;
     this.movieService.getSearchData(this.search)
     .subscribe(data =>{
-      data.results.forEach(i=>{
+      data["results"].forEach(i=>{
         i.poster_path ="https://image.tmdb.org/t/p/original"+ i.poster_path;
         
       });
-      this.movieData=data.results;
+      this.movieData=data["results"];
     });
   });
   }
@@ -33,5 +33,5 @@ export class SearchComponent implements OnInit {
   onCardClick(id){
     this.router.navigate(['/details',id]);
   }
-  
+
 }

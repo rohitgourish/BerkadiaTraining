@@ -13,6 +13,8 @@
             <h6><u>PRODUCTION COMPANY</u>: {{movieDetails.production_companies[0]["name"]}}</h6>
             <br>
             <a (click)="ImdbPage(movieDetails.imdb_id)"><u>CLICK HERE TO OPEN IMDB PAGE</u></a>
+            <br><br>
+            <button class="btn btn-secondary" (click)="goBack()">GO BACK TO HOME PAGE</button>
         </div>
     </div>
 </div>
