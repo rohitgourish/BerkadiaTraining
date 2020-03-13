@@ -28,7 +28,7 @@ export class MovieDetailsComponent implements OnInit {
 
   }
   ImdbPage(id){
-    window.open(`https://www.imdb.com/title/${id}/?ref_=nv_sr_srsg_0`);
+    return `https://www.imdb.com/title/${id}/?ref_=nv_sr_srsg_0`;
   }
 
   goBack(){

@@ -12,7 +12,7 @@
             <h6><u>GENRE</u>: <span *ngFor="let item of movieDetails.genres;let i = index">{{item.name+', '}}</span> </h6> 
             <h6><u>PRODUCTION COMPANY</u>: {{movieDetails.production_companies[0]["name"]}}</h6>
             <br>
-            <a (click)="ImdbPage(movieDetails.imdb_id)"><u>CLICK HERE TO OPEN IMDB PAGE</u></a>
+            <a target="_blank" [href]="ImdbPage(movieDetails.imdb_id)"><u>CLICK HERE TO OPEN IMDB PAGE</u></a>
             <br>
             <button class="btn btn-secondary" (click)="goBack()">GO BACK TO HOME PAGE</button>
         </div>
