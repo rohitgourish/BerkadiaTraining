@@ -2,5 +2,6 @@ export interface IEmployee{
     id:number,
     name:string,
     email:string,
-    age:number
+    subject:string,
+    gender:string
 }

@@ -7,12 +7,14 @@ router.post("/insert",async (req, res) => {
         let id = req.body.id;
         let name = req.body.name;
         let email = req.body.email;
-        let age = req.body.age;
+        let subject = req.body.subject;
+        let gender = req.body.gender;
         data = {
             id: id,
             name: name,
             email: email,
-            age: age
+            subject:subject,
+            gender:gender
         }
         console.log(data);
         var callService = new studentService();
@@ -91,12 +93,14 @@ router.put("/update", async(req,res)=>{
         let id = req.body.id;
         let name = req.body.name;
         let email = req.body.email;
-        let age = req.body.age;
+        let subject = req.body.subject;
+        let gender = req.body.gender;
         data = {
             id:id,
             name:name,
             email:email,
-            age:age
+            subject:subject,
+            gender:gender
         }
         let callService = new studentService();
         let result =await callService.updateDetails(data);

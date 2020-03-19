@@ -9,13 +9,15 @@ import { Router } from '@angular/router';
 })
 export class AddEmployeesComponent implements OnInit {
   public empData:IEmployee;
+  topics = ["Angular","React","Node"];
   
   constructor(private employeeService:EmployeeService, private router:Router) { 
     this.empData = {
       id:null,
       name:null,
       email:null,
-      age:null
+      subject:null,
+      gender:null
     }
   }
   ngOnInit(): void {

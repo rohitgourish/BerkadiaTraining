@@ -3,7 +3,7 @@ let executeQuery = require('../db/connect.js');
 module.exports = class StudentServices {
     async postMethod(data) {
         try {
-            let result = await executeQuery('insert into student values ($1,$2,$3,$4)', [data.id, data.name, data.email, data.age]);
+            let result = await executeQuery('insert into student1 values ($1,$2,$3,$4,$5)', [data.id, data.name, data.email, data.subject,data.gender]);
             console.log(result);
             return result.rowCount;
         } catch (error) {
@@ -13,7 +13,7 @@ module.exports = class StudentServices {
 
     async searchByName(name){
         try {
-            let query = `select * from student where name like '${name}%' order by id`;
+            let query = `select * from student1 where name like '${name}%' order by id`;
             console.log(query);
             let result = await executeQuery(query);
             return result;
@@ -24,8 +24,7 @@ module.exports = class StudentServices {
     
     async getAllDetails() {
         try {
-            let result = await executeQuery('select * from student order by id');
-           
+            let result = await executeQuery('select * from student1 order by id');
             return result;
         } catch (error) {
             throw error;
@@ -34,7 +33,7 @@ module.exports = class StudentServices {
     
     async getDetailsById(id) {
         try {
-            let result = await executeQuery('select * from student where id = $1', [id]);
+            let result = await executeQuery('select * from student1 where id = $1', [id]);
             return result;
         } catch (error) {
             throw error;
@@ -46,13 +45,16 @@ module.exports = class StudentServices {
             if (data.id !== undefined) {
                 let result;
                 if (data.name !== undefined) {
-                    result = await executeQuery('update student set name = $1 where id = $2', [data.name, data.id]);
+                    result = await executeQuery('update student1 set name = $1 where id = $2', [data.name, data.id]);
                 }
                 if (data.email !== undefined) {
-                    result = await executeQuery('update student set email = $1 where id = $2', [data.email, data.id]);
+                    result = await executeQuery('update student1 set email = $1 where id = $2', [data.email, data.id]);
                 }
-                if (data.age !== undefined) {
-                    result = await executeQuery('update student set age = $1 where id = $2', [data.age, data.id]);
+                if (data.subject !== undefined) {
+                    result = await executeQuery('update student1 set subject = $1 where id = $2', [data.subject, data.id]);
+                }
+                if (data.gender !== undefined) {
+                    result = await executeQuery('update student1 set gender = $1 where id = $2', [data.gender, data.id]);
                 }
                 return result;
             } else{
@@ -67,7 +69,7 @@ module.exports = class StudentServices {
     async deleteDetails(id){
         try {
             if(id!==undefined){
-                let result = await executeQuery('delete from student where id = $1',[id]);
+                let result = await executeQuery('delete from student1 where id = $1',[id]);
                 console.log(result);
                 return result;
             } else{

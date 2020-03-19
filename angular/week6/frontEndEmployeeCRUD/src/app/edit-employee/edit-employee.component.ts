@@ -10,13 +10,15 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 export class EditEmployeeComponent implements OnInit {
   public id:number;
   empData:any;
+  topics = ["Angular","React","Node"];
   
   constructor(private activatedRoute:ActivatedRoute,private employeeService:EmployeeService, private router:Router) {
     this.empData = {
       id:null,
       name:null,
       email:null,
-      age:null
+      subject:null,
+      gender:null
     }
    }
   
